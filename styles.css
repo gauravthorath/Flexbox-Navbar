@@ -1,0 +1,45 @@
+/* to remove space outside of nav bar*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-size: 1.5rem;
+    background-color: #958c8c;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* added as its parent of all flex items */
+    /* justify-content: space-around; */
+    /* commented as added flex to each item seperately  */
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 0.5rem;
+    flex: auto;
+    /* to make space around each menu item within menu area */
+    text-align: center;
+    /*to make menu item centered to menu item */
+}
+
+nav ul li:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* added for small screens / mobile screens */
+@media screen and (max-width: 400px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
